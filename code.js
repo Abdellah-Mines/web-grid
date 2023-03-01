@@ -3,7 +3,22 @@ document.addEventListener("DOMContentLoaded", () => {
   initialCleanup();
 
   // Hey! Pssst! In here ...
-});
+  document.getElementById("btn-add-line").addEventListener("click",() => {
+    for (let i = 0; i < 10; i++) {
+      ligne = document.createElement('div');
+      grid.append(ligne)
+    }
+  });
+    for (let child of document.getElementById("grid").children) {
+    child.addEventListener("click", (event) =>{
+      event.target.style.backgroundColor = "green"
+    } )
+  }
+  
+
+  });
+
+
 
 /**
  * Cleans up the document so that the exercise is easier.
